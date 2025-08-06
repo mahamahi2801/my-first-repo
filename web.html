@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background: pink;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+    #quote {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> Quote Generator</h1>
+    <p id="quote">Click the button to get a motivational  quote</p>
+    <button onclick="generateQuote()">Get Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "positive thinking will let you do everything better than negative thinking will.",
+      "If you change the way you look at things, the things you look at change.",
+"The only limit to your impact is your imagination and commitment.",
+"It is never too late to be what you might have been.",
+"Once you replace negative thoughts with positive ones, you'll start having positive results.",
+"Nothing is impossible, the word itself says 'I'm possible'!"
+
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
